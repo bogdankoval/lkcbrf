@@ -48,7 +48,7 @@ def main():
          s = requests.Session()
          r = s.post('https://portal4.cbr.ru/Account/Login', data = {'UserName':'leg10261021035762124', 'Password':'Hklm2070%'})
          r = s.get('https://portal4.cbr.ru//Notification/GetNotificationCount')
-         greet_bot.send_message(last_chat_id, "У вас в личном кабинете " + r.text + " непрочитанных сообщений")
+         greet_bot.send_message(last_chat_id, "У вас в личном кабинете есть непрочитанные сообщения в количестве " + r.text)
           
          #today += 1
          new_offset = last_update_id + 1
