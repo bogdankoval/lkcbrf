@@ -29,7 +29,7 @@ class BotHandler:
 
         return last_update
 
-greet_bot = BotHandler(token)  
+greet_bot = BotHandler(token)   
 
 def main():  
      new_offset = None
