@@ -42,9 +42,9 @@ def main():
          #   last_chat_text = last_update['message']['text']
          last_chat_id = last_update['message']['chat']['id']
           #   last_chat_name = last_update['message']['chat']['first_name']
-         greet_bot.send_message(last_chat_id, 'Я бот для уведомления о поступлении новых сообщений в Личный кабинет ЦБ РФ.')
+         greet_bot.send_message(last_chat_id, 'В дальнейшем сообщения о 0 непрочитанных сообщениях приходить не будут.') 
          greet_bot.send_message(last_chat_id, 'Это тестовая версия, на период отладки в целях изучения поведения бота.')
-         greet_bot.send_message(last_chat_id, 'В дальнейшем сообщения о 0 непрочитанных сообщениях приходить не будут.')
+         
          s = requests.Session()
          r = s.post('https://portal4.cbr.ru/Account/Login', data = {'UserName':'leg10261021035762124', 'Password':'Hklm2070%'})
          r = s.get('https://portal4.cbr.ru//Notification/GetNotificationCount')
